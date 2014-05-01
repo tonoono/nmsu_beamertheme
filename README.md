@@ -50,5 +50,11 @@ For one logo, the file `uni_logo.jpg` is expected.
 For two logos, the files `uni_logo.jpg` and `uni_dept_logo.jpg` are expected.
 
 
+## Screenshots
+
+![Title Page](http://www.cs.nmsu.edu/~aarredon/screenshots/lascruces_shot01.png "Title Page")
+
+![Colored Boxes](http://www.cs.nmsu.edu/~aarredon/screenshots/lascruces_shot02.png "Regular Page")
+
 
 
