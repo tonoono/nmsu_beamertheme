@@ -1,0 +1,93 @@
+% Created 2014 by Antonio Arredondo <aarredon@cs.nmsu.edu>
+%
+% Based off the work of:
+%   Sarah Merz <smerz@pacific.edu>  http://www1.pacific.edu/~smerz/Pacific_Beamer_Theme.html
+%   Riccardo Murri <riccardo.murri@uzh.ch>  https://github.com/gc3-uzh-ch/beamer-theme-gc3
+%
+% This tex/latex can be redistributed and/or modified under the terms
+% of the GNU Public License Version 2.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                            
+% Department customization                                                      
+%                                                                               
+% Define your university or organization                                        
+\newcommand{\UniName}{New Mexico State University}                              
+%                                                                               
+% Define your department or group                                               
+\newcommand{\UniDeptName}{Computer Science}                                     
+%                                                                               
+% Define your university or organization logo, by replacing the 'uni_logo' filename 
+% with the filename of your image                                               
+\newcommand{\UniImage}{\includegraphics[width=2cm]{uni_logo}}                   
+%                                                                               
+% Optional: If your department or group has logo, uncomment the line below and  
+% replace the 'uni_dept_logo' with your filename                                
+%\newcommand{\UniDeptImage}{\includegraphics[width=2cm]{uni_dept_logo}}          
+ 
+\documentclass{beamer}
+\usetheme{LasCruces}
+
+\title[Short Presentation Title]{~ \\ Long Title:  A sample presentation using \\ a custom beamer theme \\~} 
+\author[Short Author Name]{ Antonio Arredondo \\ \UniName \\ \UniDeptName} 
+\date{May 01, 2014}
+
+\begin{document}
+
+% title page
+\begin{frame}
+  \maketitle
+\end{frame}
+
+% frame showing all the custom defined boxes
+\begin{frame}
+  \frametitle{NMSU Colored Boxes}
+  \crimsonbox{Crimson Box}{Use the \texttt{\textbackslash crimsonbox} command for this box.}
+  \bluebox{Blue Box}{Use the \texttt{\textbackslash bluebox} command for this box.}
+  \greenbox{Green Box}{Use the \texttt{\textbackslash greenbox} command for this box.}
+  \yellowbox{Yellow Box}{Use the \texttt{\textbackslash yellowbox} command for this box.}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Bullets}
+  \begin{itemize}
+    \item These are the default bullets using
+    \item \texttt{\textbackslash begin\{itemize\}} command
+  \end{itemize} 
+
+  \begin{crimsonitemize}
+    \item These bullets are produced with the 
+    \item \texttt{\textbackslash begin\{crimsonitemize\}} command
+  \end{crimsonitemize}
+
+  \begin{blueitemize}
+    \item These bullets are produced with the 
+    \item \texttt{\textbackslash begin\{blueitemize\}} command
+  \end{blueitemize}
+
+  \begin{greenitemize}
+    \item These bullets are produced with the 
+    \item \texttt{\textbackslash begin\{greenitemize\}} command
+  \end{greenitemize}
+
+  \begin{yellowitemize}
+    \item These bullets are produced with the 
+    \item \texttt{\textbackslash begin\{yellowitemize\}} command
+  \end{yellowitemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Match Bullets}
+  \crimsonbox{Color match bullets}{
+    \begin{crimsonitemize}
+      \item Don't forget to match 
+      \item your bullets to the box 
+      \item they live in. 
+    \end{crimsonitemize}
+  }
+\end{frame}
+
+\end{document}
+

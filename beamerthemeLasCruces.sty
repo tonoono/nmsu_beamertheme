@@ -1,0 +1,123 @@
+% Created 2014 by Antonio Arredondo <aarredon@cs.nmsu.edu>
+%
+% Based off the work of:
+%   Sarah Merz <smerz@pacific.edu>  http://www1.pacific.edu/~smerz/Pacific_Beamer_Theme.html
+%   Riccardo Murri <riccardo.murri@uzh.ch>  https://github.com/gc3-uzh-ch/beamer-theme-gc3
+%
+% This template can be redistributed and/or modified under the terms
+% of the GNU Public License Version 2.
+
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NMSU approved colors (05/2014)
+% primary colors
+\definecolor{nmsucrimson}{RGB}{140,11,66}
+% secondary colors
+\definecolor{nmsublue}{RGB}{1,67,134}
+\definecolor{nmsuyellow}{RGB}{253,184,19}
+\definecolor{nmsugreen}{RGB}{0,129,83}
+% tertiary colors
+\definecolor{nmsulightgreen}{RGB}{0,117,123}
+\definecolor{nmsulightblue}{RGB}{0,102,179}
+\definecolor{nmsuorange}{RGB}{201,93,26}
+\definecolor{nmsupurple}{RGB}{129,41,144}
+\definecolor{nmsulightorange}{RGB}{247,147,30}
+% background box fill color
+\definecolor{nmsuboxfill}{RGB}{235,235,235}
+
+\useoutertheme{split}
+\useinnertheme{rounded}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+\usecolortheme[named=nmsucrimson]{structure} 
+
+
+%% color box templates (based on the primary colors)
+
+\newcommand{\crimsonbox}[2]{
+\setbeamercolor{uppercol}{fg=white,bg=nmsucrimson}
+\setbeamercolor{lowercol}{fg=black,bg=nmsuboxfill}
+\begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=true]{
+#1 }  #2
+\end{beamerboxesrounded} }
+
+\newcommand{\bluebox}[2]{
+\setbeamercolor{uppercol}{fg=white,bg=nmsublue}
+\setbeamercolor{lowercol}{fg=black,bg=nmsuboxfill}
+\begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=true]{
+#1 }  #2
+\end{beamerboxesrounded} }
+
+\newcommand{\yellowbox}[2]{
+\setbeamercolor{uppergrn}{fg=white,bg=nmsuyellow}
+\setbeamercolor{lowercol}{fg=black,bg=nmsuboxfill}
+\begin{beamerboxesrounded}[upper=uppergrn,lower=lowercol,shadow=true]{
+#1 }  #2
+\end{beamerboxesrounded} }
+
+\newcommand{\greenbox}[2]{
+\setbeamercolor{upperblue}{fg=white,bg=nmsugreen}
+\setbeamercolor{lowercol}{fg=black,bg=nmsuboxfill}
+\begin{beamerboxesrounded}[upper=upperblue,lower=lowercol,shadow=true]{
+#1 }  #2
+\end{beamerboxesrounded} }
+
+\newenvironment{crimsonitemize}{\setbeamertemplate{itemize item}{\textcolor{nmsucrimson}{$\bullet$}}\begin{itemize}}{\end{itemize}}
+\newenvironment{blueitemize}{\setbeamertemplate{itemize item}{\textcolor{nmsublue}{$\bullet$}} \begin{itemize}}{\end{itemize}}
+\newenvironment{yellowitemize}{\setbeamertemplate{itemize item}{\textcolor{nmsuyellow}{$\bullet$}} \begin{itemize}}{\end{itemize}}
+\newenvironment{greenitemize}{\setbeamertemplate{itemize item}{\textcolor{nmsugreen}{$\bullet$}} \begin{itemize}}{\end{itemize}}
+
+% Custom title page with university logo and department logo
+\setbeamertemplate{title page}
+{
+  \vbox{}
+  \vfill
+  \begin{centering}
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \vskip0.25em%
+      {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%     
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+    % move the logos up a bit
+    \vskip-15mm
+
+    % check for titlepage logo
+    \ifdefined \UniImage 
+      % if the optional logo is defined both images are placed on either side of the date
+      \ifdefined \UniDeptImage
+        \includegraphics[width=2cm]{uni_logo}
+        \hspace*{4.75cm}~
+        \includegraphics[width=2cm]{uni_dept_logo}
+      % else the single logo is placed on the right hand side of the date
+      \else
+        \hspace*{6.75cm}~
+        \includegraphics[width=2cm]{uni_logo}
+      \fi
+    \fi
+    
+  \end{centering}
+  \vfill
+}
+
+% Change the left footer bg color 
+\setbeamercolor*{palette quaternary}{fg=white,bg=nmsublue}
+
+\mode
+<all>
+
