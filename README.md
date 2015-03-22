@@ -8,7 +8,7 @@ is located.
 ## Installing a custom theme
 
 #### Working directory
-Copy the file *beamerthemeLasCruces.sty* to your working directory.
+Copy the *beamerthemeLasCruces.sty* and *colorsLasCruces.sty* to your working directory.
 
 #### Not in working directory
 If you are going to use the theme often, it is best to "install" it.  If my **$HOME** 
@@ -19,7 +19,8 @@ To create the path use the following commands:
     
     mkdir -p ~/texmf/tex/latex
     cp beamerthemeLasCruces.sty ~/texmf/tex/latex/
-    texhash
+    cp colorsLasCruces.sty ~/texmf/tex/latex/
+    texhash ~/texmf/tex/latex/
 
 
 ## Usage
@@ -42,12 +43,14 @@ See lascruces_example.tex for more details.
 
 
 ### titlepage logos
+The logos have been moved to the `images` directory. This will also provide some organization when
+including many images in the presentation.
 
 I have included the option to have one or two logos on the title page. 
 
-For one logo, the file `uni_logo.jpg` is expected. 
+For one logo, the file `images/uni_logo.jpg` is expected. 
 
-For two logos, the files `uni_logo.jpg` and `uni_dept_logo.jpg` are expected.
+For two logos, the files `images/uni_logo.jpg` and `images/uni_dept_logo.jpg` are expected.
 
 
 ## Screenshots
